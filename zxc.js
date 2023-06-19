@@ -1,6 +1,6 @@
 const button = document.querySelector('button')
 const buttonHandler = (el) => {
     el.preventDefault()
-    alert('zxc')
+    alert('Z O V')
 }
 button.addEventListener('click', buttonHandler)

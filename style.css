@@ -34,7 +34,7 @@ h1 {
 
 input {
   width: 50px;
-  heigh: 30px;
+  height: 30px;
 }
 
 button{
@@ -62,7 +62,7 @@ center {
   padding-top: 35px;
   font-size: 1.5em;
   margin-left: 455px;
-  margin top: 100px;
+  margin-top: 100px;
 }
 .author {
   margin-left: 1100px;
