@@ -1,127 +1,127 @@
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: white;
-    height: 100px;
-  }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  height: 100px;
+}
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+}
+
+.button-container-top {
+  display: flex;
+  gap: 25px;
+}
+
+.button-container-top input {
+  width: 50px;
+  height: 30px;
+}
+
+hr {
+  background-color: grey;
+  height: 20px;
+  border: none;
+  margin: 0;
+}
+
+.quote-title {
+  font-size: 2em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.content-wrapper {
+  text-align: center;
+}
+
+.quote-content {
+  display: inline-block;
+  width: 50%;
+  font-size: 1.2em;
+}
+
+.author-name {
+  font-size: 1.2em;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center; 
+  margin-top: 30px;
+  gap: 900px;
+  margin-top: 250px;
+}
+
+.button-container-left select {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.generate-btn,
+.rate-btn,
+.share-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+.generate-btn:hover,
+.rate-btn:hover,
+.share-btn:hover{
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 767.98px) {
   .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    flex-direction: column;
   }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
-
-  .container {
-    position: relative;
-  }
-
+  
   .button-container-top {
-    display: flex;
-    gap: 25px;
+    margin-top: 10px;
   }
-
-  .button-container-top input {
-    width: 50px;
-    height: 30px;
-  }
-
-  hr {
-    background-color: grey;
-    height: 20px;
-    border: none;
-    margin: 0;
-  }
-
-  .quote-title {
-    font-size: 2em;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  .content-wrapper {
-    text-align: center;
-  }
-
+  
   .quote-content {
-    display: inline-block;
-    width: 50%;
-    font-size: 1.2em;
+    width: 80%;
   }
-
+  
   .author-name {
-    font-size: 1.2em;
-    margin-top: 30px;
-    margin-left: 10px;
+    margin-left: 0;
   }
-
-  .button-wrapper {
+  .button-container-right {
     display: flex;
-    justify-content: center; 
-    margin-top: 30px;
-    gap: 900px;
-    margin-top: 250px;
+    margin-left: 100px;
   }
-
-  .button-container-left select {
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
+  .select-value {
+    margin-left: 100px;
   }
-
-  .generate-btn,
-  .rate-btn,
-  .share-btn {
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-  }
-  .generate-btn:hover,
-  .rate-btn:hover,
-  .share-btn:hover{
-    background-color: white;
-    color: black;
-  }
-
-  @media (max-width: 767.98px) {
-    .header-container {
-      flex-direction: column;
-    }
-    
-    .button-container-top {
-      margin-top: 10px;
-    }
-    
-    .quote-content {
-      width: 80%;
-    }
-    
-    .author-name {
-      margin-left: 0;
-    }
-    .button-container-right {
-      display: flex;
-      margin-left: 100px;
-    }
-    .select-value {
-      margin-left: 100px;
-    }
-    
+  
 }
 
 

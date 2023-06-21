@@ -1,25 +1,35 @@
-import axios from "axios";
+import axios from 'axios';
 
- async function quote() {
-  const options = {
-    method: 'GET',
-    url: 'https://quotes15.p.rapidapi.com/quotes/random/', 
-    params: {
-      language_code: 'ru',
-    },
-    headers: {
-      'X-RapidAPI-Key': '81d549cfaemsh060cff6e4b4677ep1c0aeajsn1ee45e409c7a',
-      'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
-    }
-  };
-
+async function getQuote() {
   try {
-    const response = await axios.request(options);
-    console.log(response.data.content);//циатата
-    console.log(response.data.originator.name);//автор
-    return response
+    const response = await axios.request({
+      method: 'GET',
+      url: 'https://quotes15.p.rapidapi.com/quotes/random/',
+      params: {
+        language_code: 'ru',
+      },
+      headers: {
+        'X-RapidAPI-Key': '81d549cfaemsh060cff6e4b4677ep1c0aeajsn1ee45e409c7a',
+        'X-RapidAPI-Host': 'quotes15.p.rapidapi.com',
+      },
+    });
+
+    const quote = response.data.content;
+    const author = response.data.originator.name;
+
+    const quoteContainer = document.getElementById('content-wrapper');
+    quoteContainer.innerHTML = `"${quote}" - ${author}`;
   } catch (error) {
-    throw new Error(error);
- }
+    console.error('Ошибка при получении цитаты:', error.message);
+  }
 }
-quote()
+
+getQuote();
+
+document.addEventListener('DOMContentLoaded', function() {
+  const generateButton = document.getElementById('generate-btn');
+
+  generateButton.addEventListener('click', function() {
+    getQuote();
+  });
+});
