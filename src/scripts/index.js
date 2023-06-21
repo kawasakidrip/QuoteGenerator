@@ -1,5 +1,6 @@
 import axios from "axios";
-async function quote() {
+
+ async function quote() {
   const options = {
     method: 'GET',
     url: 'https://quotes15.p.rapidapi.com/quotes/random/', 
@@ -14,11 +15,11 @@ async function quote() {
 
   try {
     const response = await axios.request(options);
-    console.log(response.data.content);
-    console.log(response.data.originator.name);
-    return response;
+    console.log(response.data.content);//циатата
+    console.log(response.data.originator.name);//автор
+    return response
   } catch (error) {
     throw new Error(error);
-  }
+ }
 }
-export default quote;
+quote()
