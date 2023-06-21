@@ -66,8 +66,10 @@
 
   .button-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
     margin-top: 30px;
+    gap: 900px;
+    margin-top: 250px;
   }
 
   .button-container-left select {
@@ -112,8 +114,14 @@
     .author-name {
       margin-left: 0;
     }
-
-
+    .button-container-right {
+      display: flex;
+      margin-left: 100px;
+    }
+    .select-value {
+      margin-left: 100px;
+    }
+    
 }
 
 
