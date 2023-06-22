@@ -18,26 +18,34 @@
       <center><h2 class="quote-title">Цитата дня:</h2></center> 
       <div class="content-wrapper" id="content-wrapper1"> 
         <div class="quote-content">
-          <p>За свою карьеру я пропустил более 9000 бросков, проиграл почти 300 игр. 26 раз мне доверяли сделать финальный победный бросок, и я промахивался. Я терпел поражения снова, и снова, и снова. И именно поэтому я добился успеха.</p>
+          <p id="result">За свою карьеру я пропустил более 9000 бросков, проиграл почти 300 игр. 26 раз мне доверяли сделать финальный победный бросок, и я промахивался. Я терпел поражения снова, и снова, и снова. И именно поэтому я добился успеха.</p>
           <p class="author-name">- Майкл Джордан</p> 
         </div>
       </div> 
       <div class="button-wrapper"> 
         <div class="button-container-left"> 
-          <select class="select-value">
-            <option>Выбрать тему</option> 
-            <option>Тема1</option> 
-            <option>Тема2</option> 
-            <option>Тема3</option> 
+          <select class="select-value" id="themeSelect">
           </select>
           <button class="generate-btn" id="gen-btn">Сгенерировать</button>    
         </div> 
-        <div class="button-container-right"> 
-          <button class="rate-btn">Оценить</button> 
-          <button class="share-btn">Поделиться</button> 
-        </div> 
+        <div class="button-container-right">
+          <!-- хз бля мб так оставить, как думаешь?
+          просто так выводитсья оценка и все такое
+        хотя я ваще не ебу зачем это нужно -->
+          <button class="rate-btn">Оценить</button>
+          <button class="share-btn">Поделиться</button>
+          <div class="rate-btn">
+            <span class="rating-value" id="rating-value">0</span>
+            <button class="rating-btn" data-rating="1">1</button>
+            <button class="rating-btn" data-rating="2">2</button>
+            <button class="rating-btn" data-rating="3">3</button>
+            <button class="rating-btn" data-rating="4">4</button>
+            <button class="rating-btn" data-rating="5">5</button>
+          </div>
+        </div>
       </div> 
-    </div> 
+    </div>
+    <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
     <script src="./scripts/index.js" type="module"></script>
   </body> 
