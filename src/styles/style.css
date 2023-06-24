@@ -1,44 +1,32 @@
+/* Общие стили */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 header {
+  background-color: #333333;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: white;
-  height: 100px;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
+  color: #ffffff;
   display: flex;
   align-items: center;
   margin: 0;
-}
-
-.container {
-  position: relative;
-}
-
-.button-container-top {
-  display: flex;
-  gap: 25px;
-}
-
-.button-container-top input {
-  width: 50px;
-  height: 30px;
-}
-
-hr {
-  background-color: grey;
-  height: 20px;
-  border: none;
-  margin: 0;
+  font-size: 1.5em;
 }
 
 .quote-title {
@@ -46,81 +34,155 @@ hr {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
+  color: #333333;
 }
 
 .content-wrapper {
   text-align: center;
+  margin-top: 150px;
 }
 
 .quote-content {
-  display: inline-block;
-  width: 50%;
-  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.4em;
+  color: #666666;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quote-content:before {
+  content: open-quote;
+  font-size: 3em;
+  color: #999999;
+  margin-bottom: -0.4em;
+}
+
+.quote-content p {
+  margin: 0;
 }
 
 .author-name {
-  font-size: 1.2em;
-  margin-top: 30px;
-  margin-left: 10px;
+  font-size: 1.4em;
+  margin-top: 20px;
+  color: #999999;
+  text-align: right;
 }
 
 .button-wrapper {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
+  align-items: center;
   margin-top: 30px;
-  gap: 900px;
-  margin-top: 250px;
+  gap: 15px;
 }
 
-.button-container-left select {
-  background-color: black;
-  color: white;
+.select-value,
+.share-btn,
+.generate-btn {
+  background-color: #333333;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 20px;
   cursor: pointer;
+  width: fit-content;
+  font-size: 1em;
 }
 
-.generate-btn,
-.rate-btn,
-.share-btn {
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  cursor: pointer;
-}
 .generate-btn:hover,
-.rate-btn:hover,
-.share-btn:hover{
-  background-color: white;
-  color: black;
+.share-btn:hover {
+  background-color: #666666;
 }
 
-@media (max-width: 767.98px) {
-  .header-container {
-    flex-direction: column;
+.left-image {
+  background-image: url('1614590697_42-p-pero-na-belom-fone-45.png');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: auto;
+  float: left;
+  margin-right: 20px;
+}
+
+/* Медиазапросы для адаптивности */
+
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    padding: 10px;
   }
-  
-  .button-container-top {
+
+  .logo {
+    font-size: 1.2em;
+  }
+
+  .quote-title {
+    font-size: 1.6em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .content-wrapper {
+    margin-top: 100px;
+  }
+
+  .quote-content {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  .quote-content:before {
+    font-size: 2em;
+  }
+
+  .author-name {
+    font-size: 1.2em;
     margin-top: 10px;
   }
-  
-  .quote-content {
-    width: 80%;
+
+  .button-wrapper {
+    margin-top: 20px;
   }
-  
-  .author-name {
-    margin-left: 0;
-  }
-  .button-container-right {
-    display: flex;
-    margin-left: 100px;
-  }
-  .select-value {
-    margin-left: 100px;
-  }
-  
 }
 
+@media only screen and (max-width: 479px) {
+  .wrapper {
+    padding: 5px;
+  }
+
+  .quote-title {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .content-wrapper {
+    margin-top: 50px;
+  }
+
+  .quote-content {
+    font-size: 1em;
+    padding: 5px;
+  }
+
+  .quote-content:before {
+    font-size: 1.5em;
+  }
+
+  .author-name {
+    font-size: 1em;
+    margin-top: 5px;
+  }
+
+  .button-wrapper {
+    margin-top: 10px;
+  }
+}
