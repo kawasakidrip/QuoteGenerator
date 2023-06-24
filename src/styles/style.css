@@ -99,7 +99,8 @@ header {
 }
 
 .select-value,
-.share-btn {
+.share-btn,
+.generate-btn {
   background-color: #333333;
   color: #ffffff;
   border: none;
