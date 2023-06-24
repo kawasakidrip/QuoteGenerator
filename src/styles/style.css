@@ -6,55 +6,30 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  flex-grow: 1; /* Заполняет оставшееся место снизу */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 70px;
+  margin-top: 50px; /* Учитываем высоту верхней полоски */
 }
 
 header {
+  background-color: #333333;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
+
 
 .logo {
+  color: #ffffff;
   display: flex;
   align-items: center;
   margin: 0;
   font-size: 1.5em;
-}
-
-.container {
-  position: relative;
-}
-
-.button-container-top {
-  display: flex;
-  gap: 15px;
-}
-
-.button-container-top input {
-  width: 30px;
-  height: 30px;
-}
-
-hr {
-  background-color: #ccc;
-  height: 1px;
-  border: none;
-  margin: 0;
 }
 
 .quote-title {
@@ -62,10 +37,12 @@ hr {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
+  color: #333333;
 }
 
 .content-wrapper {
   text-align: center;
+  margin-top: 150px;
 }
 
 .quote-content {
@@ -73,34 +50,58 @@ hr {
   flex-direction: column;
   align-items: center;
   width: 80%;
-  max-width: 800px; /* Увеличиваем максимальную ширину блока */
-  margin: 0 auto; /* Центрируем блок горизонтально */
-  font-size: 1.4em; /* Увеличиваем размер шрифта */
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.4em;
+  color: #666666;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quote-content:before {
+  content: open-quote;
+  font-size: 3em;
+  color: #999999;
+  margin-bottom: -0.4em;
+}
+
+.quote-content p {
+  margin: 0;
 }
 
 .author-name {
-  font-size: 1.4em; /* Увеличиваем размер шрифта */
-  margin-top: 20px; /* Увеличиваем отступ сверху */
+  font-size: 1.4em;
+  margin-top: 20px;
+  color: #999999;
+  text-align: right;
 }
 
 .button-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 30px;
-  gap: 10px;
-  flex-wrap: wrap;
+  position: fixed;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.button-container-left {
+.static-buttons {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
 .select-value,
 .share-btn {
-  background-color: black;
-  color: white;
+  background-color: #333333;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -109,22 +110,10 @@ hr {
   font-size: 1em;
 }
 
-
-.generate-btn {
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 15px;
-  cursor: pointer;
-  font-size: 1.2em;
-  margin-bottom: 25px;
-}
-
 .generate-btn,
 .rate-btn,
 .share-btn {
-  background-color: #000000;
+  background-color: #333333;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -133,47 +122,18 @@ hr {
   transition: background-color 0.3s ease;
 }
 
-.share-btn {
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
-  cursor: pointer;
-  width: 150px;
-  font-size: 1em;
-}
-
-
-
 .generate-btn:hover,
 .rate-btn:hover,
 .share-btn:hover {
   background-color: #333333;
 }
 
-.button-container-right {
-  display: flex;
-  gap: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .quote-content {
-    width: 100%;
-  }
-
-  .button-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .button-container-left {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .select-value {
-    margin-bottom: 10px;
-  }
+.left-image {
+  background-image: url('1614590697_42-p-pero-na-belom-fone-45.png');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: auto;
+  float: left;
+  margin-right: 20px;
 }
