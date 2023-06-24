@@ -97,6 +97,9 @@ header {
   align-items: center;
   gap: 10px;
 }
+.select-value {
+  margin-right: 15px;
+}
 
 .select-value,
 .share-btn,
