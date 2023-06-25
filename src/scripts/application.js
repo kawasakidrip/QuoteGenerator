@@ -15,19 +15,23 @@ const app = async () => {
   const generateRandomQuote = async () => {
     if (isButtonDisabled) return;
     isButtonDisabled = true;
-
+  
     const { quote, author } = await getQuote();
     if (quote) {
       const truncatedQuote = truncateQuote(quote);
-      resultEl.textContent = truncatedQuote;
-      authorEl.textContent = author;
+      if (truncatedQuote.length <= maxCharacters) {
+        resultEl.textContent = truncatedQuote;
+        authorEl.textContent = author;
+      } else {
+        generateRandomQuote(); // Если цитата длиннее maxCharacters, генерируем новую цитату
+      }
     }
-
+  
     setTimeout(() => {
       isButtonDisabled = false;
     }, 1000);
   };
-
+  
   const getQuoteOfTheDay = async () => {
     const { quote, author } = await getQuote();
     if (quote) {

@@ -1,9 +1,5 @@
-/* Общие стили */
 body {
   position: relative;
-  background-color: #464451;
-  margin: 0;
-  padding: 0;
 }
 
 .wrapper {
@@ -24,14 +20,23 @@ header {
   align-items: center;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: #293133;
+  
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 1;
 }
+
+.button-container-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 60px;
+}
+
 
 .logo {
   color: white;
@@ -52,7 +57,7 @@ header {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
-  color: white;
+  color: #333333;
 }
 
 .content-wrapper {
@@ -72,7 +77,7 @@ header {
   text-align: justify;
   line-height: 1.5;
   padding: 20px;
-  background-color: #CCCCFF;
+  background-color: #f9f9f9;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -100,25 +105,50 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  position: fixed;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
   gap: 25px;
+}
+
+.static-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select-value {
+  margin-right: 15px;
 }
 
 .select-value,
 .share-btn,
 .generate-btn {
-  background-color: #293133;
-  color: white;
+  background-color: #333333;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
   width: fit-content;
   font-size: 1em;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
-/* Медиа-запросы для адаптивности */
+.generate-btn,
+.rate-btn,
+.share-btn {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-/* Мобильные устройства */
+
 @media (max-width: 480px) {
   .logo {
     font-size: 1em;
@@ -172,15 +202,4 @@ header {
   .quote-content {
     font-size: 1.4em;
   }
-}
-
-/* Дополнительные стили для фонового изображения */
-.left-image {
-  background-image: url('1614590697_42-p-pero-na-belom-fone-45.png');
-  background-size: cover;
-  background-position: center;
-  width: 150px;
-  height: auto;
-  float: left;
-  margin-right: 20px;
 }
