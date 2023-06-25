@@ -1,6 +1,9 @@
+/* Общие стили */
 body {
   position: relative;
   background-color: #464451;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
@@ -24,8 +27,11 @@ header {
   background-color: #293133;
 }
 
-
-
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .logo {
   color: white;
@@ -33,6 +39,12 @@ header {
   align-items: center;
   margin: 0;
   font-size: 1.5em;
+}
+
+.logo img {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
 }
 
 .quote-title {
@@ -46,7 +58,6 @@ header {
 .content-wrapper {
   text-align: center;
   margin-top: 150px;
-
 }
 
 .quote-content {
@@ -61,7 +72,7 @@ header {
   text-align: justify;
   line-height: 1.5;
   padding: 20px;
-  background-color: #F9DFCF;
+  background-color: #CCCCFF;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -89,20 +100,7 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  position: fixed;
-  bottom: 200px;
-  left: 50%;
-  transform: translateX(-50%);
   gap: 25px;
-}
-
-.static-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.select-value {
-  margin-right: 15px;
 }
 
 .select-value,
@@ -116,22 +114,67 @@ header {
   cursor: pointer;
   width: fit-content;
   font-size: 1em;
-  margin-left: 15px;
-  margin-right: 15px;
 }
 
-.generate-btn,
-.rate-btn,
-.share-btn {
-  background-color: #293133;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+/* Медиа-запросы для адаптивности */
 
+/* Мобильные устройства */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1em;
+  }
+
+  .quote-title {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .content-wrapper {
+    margin-top: 100px;
+  }
+
+  .quote-content {
+    font-size: 1.2em;
+  }
+
+  .author-name {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+    margin-top: 20px;
+    position: static;
+    bottom: auto;
+    left: auto;
+    transform: none;
+  }
+
+  .select-value,
+  .share-btn,
+  .generate-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
+/* Планшеты */
+@media (min-width: 481px) and (max-width: 768px) {
+  .quote-content {
+    font-size: 1.3em;
+  }
+}
 
+/* Ноутбуки и настольные компьютеры */
+@media (min-width: 769px) {
+  .quote-content {
+    font-size: 1.4em;
+  }
+}
+
+/* Дополнительные стили для фонового изображения */
 .left-image {
   background-image: url('1614590697_42-p-pero-na-belom-fone-45.png');
   background-size: cover;
