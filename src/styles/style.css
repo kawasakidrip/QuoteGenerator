@@ -34,16 +34,22 @@ header {
   display: flex;
   align-items: center;
   margin-left: auto;
-  margin-right: 60px;
+  margin-right: 3px;
 }
 
 
 .logo {
-  color: #ffffff;
+  color: white;
   display: flex;
   align-items: center;
   margin: 0;
   font-size: 1.5em;
+}
+
+.logo img {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
 }
 
 .quote-title {
