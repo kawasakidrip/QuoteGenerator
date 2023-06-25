@@ -25,19 +25,16 @@ body {
   }
   .header-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 950px;
-    
-  }
-  .custom-button {
-    
+    align-items: center;
   }
   
+  
+   button {
+    margin-left: 100%;
+  }
 
-  
-  
-  
+
   
   .logo {
     color: white;
