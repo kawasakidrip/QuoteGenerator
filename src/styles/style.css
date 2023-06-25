@@ -24,14 +24,15 @@ header {
 
 .header-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 950px;
-  
+  align-items: center;
 }
-.custom-button {
-  
+
+
+ button {
+  margin-left: 100%;
 }
+
 
 
 
