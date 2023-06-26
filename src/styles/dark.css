@@ -16,22 +16,23 @@ body {
 }
 
 header {
-  background-color: #293133;
+  background-color: #333333;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 60px; /* Увеличение высоты полоски */
+  overflow: hidden;
+  width: 100%;
 }
 
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-grow: 1;
-  padding: 0 20px; /* Увеличение горизонтальных отступов */
+  padding: 0 20px;
 }
-
 
 .button-container-right {
   display: flex;
@@ -45,7 +46,7 @@ header {
   align-items: center;
   margin: 0;
   font-size: 1.5em;
-  flex-grow: 1; /* Растяжение логотипа на всю доступную ширину */
+  flex-grow: 1;
 }
 
 .logo img {
@@ -65,7 +66,9 @@ header {
 .content-wrapper {
   text-align: center;
   margin-top: 150px;
-  flex-grow: 1; /* Растяжение контента на всю доступную высоту */
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
 .quote-content {
@@ -77,12 +80,13 @@ header {
   margin: 0 auto;
   font-size: 1.2em;
   color: #666666;
-  text-align: justify;
+  text-align: center;
   line-height: 1.5;
   padding: 20px;
   background-color: #CCCCFF;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .quote-content:before {
@@ -92,31 +96,14 @@ header {
   margin-bottom: -0.4em;
 }
 
-.quote-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.4em;
-  color: #666666;
-  text-align: justify;
-  line-height: 1.5;
-  padding: 20px;
-  background-color: #CCCCFF;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 200px; /* Пример фиксированной высоты */
-  overflow: hidden;
-  transition: height 0.3s ease;
+.quote-text {
+  margin-bottom: 15px;
 }
 
 .author-name {
   font-size: 1.3em;
-  margin-top: 15px;
   color: #999999;
-  text-align: right;
+  text-align: center;
 }
 
 .button-wrapper {
@@ -153,6 +140,10 @@ header {
     align-items: center;
   }
 
+  header {
+    width: 100%;
+  }
+
   .button-container-right {
     margin-top: 10px;
     margin-left: 0;
@@ -185,6 +176,11 @@ header {
 
   .content-wrapper {
     margin-top: 50px;
+  }
+
+  header {
+    width: 100%;
+    padding: 5px;
   }
 
   .quote-content {
