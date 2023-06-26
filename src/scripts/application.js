@@ -75,4 +75,3 @@ Object.keys(themeTranslations).forEach((theme) => {
 });
 
 export default app;
-

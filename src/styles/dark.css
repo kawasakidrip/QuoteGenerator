@@ -1,158 +1,180 @@
 body {
-    position: relative;
-    background-color: #464451;
-  }
-  
-  .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 50px; 
-  }
-  
-  header {
-    background-color: #333333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #293133;
-    overflow: hidden;
-  }
-  
+  position: relative;
+  background-color: #464451;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+header {
+  background-color: #293133;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 60px; /* Увеличение высоты полоски */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding: 0 20px; /* Увеличение горизонтальных отступов */
+}
+
+
+.button-container-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.logo {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 1.5em;
+  flex-grow: 1; /* Растяжение логотипа на всю доступную ширину */
+}
+
+.logo img {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+}
+
+.quote-title {
+  font-size: 2em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+.content-wrapper {
+  text-align: center;
+  margin-top: 150px;
+  flex-grow: 1; /* Растяжение контента на всю доступную высоту */
+}
+
+.quote-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  color: #666666;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 20px;
+  background-color: #CCCCFF;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quote-content:before {
+  content: open-quote;
+  font-size: 2.5em;
+  color: #999999;
+  margin-bottom: -0.4em;
+}
+
+.quote-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.4em;
+  color: #666666;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 20px;
+  background-color: #CCCCFF;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 200px; /* Пример фиксированной высоты */
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.author-name {
+  font-size: 1.3em;
+  margin-top: 15px;
+  color: #999999;
+  text-align: right;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.static-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.select-value,
+.share-btn,
+.generate-btn {
+  background-color: #293133;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+}
+
+@media (max-width: 767px) {
   .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-  }
-  
-  .button-container-right {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: 6px;
-  }
-
-
-  .logo {
-    color: white;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    font-size: 1.5em;
-  }
-  
-  .logo img {
-    width: 1em;
-    height: 1em;
-    margin-right: 0.5em;
-  }
-  
-  .quote-title {
-    font-size: 2em;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-    color: white;
-  }
-  
-  .content-wrapper {
-    text-align: center;
-    margin-top: 150px;
-  
-  }
-  
-  .quote-content {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.4em;
-    color: #666666;
-    text-align: justify;
-    line-height: 1.5;
-    padding: 20px;
-    background-color: #CCCCFF;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
-  .quote-content:before {
-    content: open-quote;
-    font-size: 3em;
-    color: #999999;
-    margin-bottom: -0.4em;
+
+  .button-container-right {
+    margin-top: 10px;
+    margin-left: 0;
   }
-  
-  .quote-content p {
-    margin: 0;
-  }
-  
-  .author-name {
-    font-size: 1.4em;
-    margin-top: 20px;
-    color: #999999;
-    text-align: right;
-  }
-  
-  .button-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    position: fixed;
-    bottom: 200px;
-    left: 49.5%;
-    transform: translateX(-50%);
-    gap: 25px;
-  }
-  
-  .static-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .select-value {
-    margin-right: 15px;
-  }
-  
-  .select-value,
-  .share-btn,
-  .generate-btn {
-    background-color: #293133;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    width: fit-content;
-    font-size: 1em;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  
-  .generate-btn,
-  .rate-btn,
-  .share-btn {
-    background-color: #293133;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-  
-  }
-  
-@media (max-width: 480px) {
+
   .logo {
-    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  .wrapper {
+    margin-top: 0;
+  }
+
+  .content-wrapper {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 10px;
+    margin-top: 30px;
   }
 
   .quote-title {
@@ -162,45 +184,39 @@ body {
   }
 
   .content-wrapper {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 
   .quote-content {
-    font-size: 1.2em;
+    width: 90%;
+    max-width: 400px;
+    font-size: 1em;
+    padding: 15px;
+  }
+
+  .quote-content:before {
+    font-size: 2em;
   }
 
   .author-name {
-    font-size: 1.2em;
-    margin-top: 10px;
+    font-size: 1em;
+    margin-top: 15px;
   }
 
   .button-wrapper {
     flex-direction: column;
     margin-top: 20px;
     position: static;
-    bottom: auto;
-    left: auto;
-    transform: none;
+  }
+
+  .static-buttons {
+    flex-direction: column;
+    gap: 15px;
   }
 
   .select-value,
   .share-btn,
   .generate-btn {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
-
-/* Планшеты */
-@media (min-width: 481px) and (max-width: 768px) {
-  .quote-content {
-    font-size: 1.3em;
-  }
-}
-
-/* Ноутбуки и настольные компьютеры */
-@media (min-width: 769px) {
-  .quote-content {
-    font-size: 1.4em;
+    margin-top: 0;
   }
 }
