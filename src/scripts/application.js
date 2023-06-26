@@ -32,6 +32,7 @@ const app = async () => {
     }, 1500);
   };
   
+  
   const getQuoteOfTheDay = async () => {
     const { quote, author } = await getQuote();
     if (quote) {

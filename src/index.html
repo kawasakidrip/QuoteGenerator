@@ -31,7 +31,7 @@
       <div class="header-container">
         <h1 class="logo"><img src="../fixtures/logo.png" alt="">Цитатник</h1>
         <div class="button-container-right">
-          <button onclick="switchTheme()">Смена</button> <!-- Исправлена опечатка -->
+          <button class="switch"  onclick="switchTheme()"></button>
         </div>
       </div>
     </header>
@@ -46,14 +46,13 @@
         <select class="select-value" id="themeSelect">
           <option value="">Выбрать тему</option>
         </select>
-        <button class="generate-btn" id="generateButton">Сгенерировать</button>
+        <button id="generate-btn" class="generate-btn">Сгенерировать</button>
         <button class="share-btn">Поделиться</button>
     </div>
   </div>
-  <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
   <script src="./scripts/quote.js" type="module"></script>
   <script src="./scripts/application.js" type="module"></script>
   <script src="./scripts/index.js" type="module"></script>
+  
 </body>
 </html>

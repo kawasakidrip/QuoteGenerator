@@ -62,7 +62,7 @@ header {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
-  color: white;
+  color: #333333;
 }
 
 .content-wrapper {
@@ -189,6 +189,12 @@ header {
   cursor: pointer;
 }
 
+.switch { 
+  width: 30px; 
+  height: 30px; 
+ 
+  background-color: black; 
+}
 
 
 @media (max-width: 480px) {
