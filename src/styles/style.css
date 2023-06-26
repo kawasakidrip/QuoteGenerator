@@ -1,5 +1,6 @@
 body {
   position: relative;
+  background-color: #FAEEDD;
 }
 
 .wrapper {
@@ -9,8 +10,9 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-top: 50px; 
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
 header {
@@ -20,23 +22,25 @@ header {
   align-items: center;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  
+  overflow: hidden;
+  width: 100%; /* Добавьте эту строку */
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between; 
   flex-grow: 1;
+  padding: 0 20px; /* Увеличение горизонтальных отступов */
 }
+
 
 .button-container-right {
   display: flex;
   align-items: center;
   margin-left: auto;
-  margin-right: 6px;
+  margin-right: 3px;
 }
-
 
 .logo {
   color: white;
@@ -44,6 +48,7 @@ header {
   align-items: center;
   margin: 0;
   font-size: 1.5em;
+  flex-grow: 1; /* Растяжение логотипа на всю доступную ширину */
 }
 
 .logo img {
@@ -57,12 +62,37 @@ header {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
-  color: #333333;
+  color: white;
 }
 
 .content-wrapper {
   text-align: center;
   margin-top: 150px;
+  flex-grow: 1; /* Растяжение контента на всю доступную высоту */
+}
+
+.quote-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  color: #666666;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quote-content:before {
+  content: open-quote;
+  font-size: 2.5em;
+  color: #999999;
+  margin-bottom: -0.4em;
 }
 
 .quote-content {
@@ -77,10 +107,9 @@ header {
   text-align: justify;
   line-height: 1.5;
   padding: 20px;
-  background-color: #f9f9f9;
+  /* background-color: #CCCCFF; */
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: color 1s ease-in-out, margin 1s ease-in-out, ;
 }
 
 .quote-content:before {
@@ -95,8 +124,8 @@ header {
 }
 
 .author-name {
-  font-size: 1.4em;
-  margin-top: 20px;
+  font-size: 1.3em;
+  margin-top: 15px;
   color: #999999;
   text-align: right;
 }
@@ -105,12 +134,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  position: fixed;
-  bottom: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  gap: 25px;
+  margin-top: 20px;
 }
 
 .static-buttons {
@@ -167,10 +191,10 @@ header {
 
 
 
-
 @media (max-width: 480px) {
-  .logo {
-    font-size: 1em;
+  .wrapper {
+    padding: 10px;
+    margin-top: 30px;
   }
 
   .quote-title {
@@ -180,39 +204,49 @@ header {
   }
 
   .content-wrapper {
-    margin-top: 100px;
+    margin-top: 50px;
+  }
+
+  header {
+    padding: 5px;
   }
 
   .quote-content {
-    font-size: 1.2em;
+    width: 90%;
+    max-width: 400px;
+    font-size: 1em;
+    padding: 15px;
+  }
+
+  .quote-content:before {
+    font-size: 2em;
   }
 
   .author-name {
-    font-size: 1.2em;
-    margin-top: 10px;
+    font-size: 1em;
+    margin-top: 15px;
   }
 
   .button-wrapper {
     flex-direction: column;
     margin-top: 20px;
     position: static;
-    bottom: auto;
-    left: auto;
-    transform: none;
+  }
+
+  .static-buttons {
+    flex-direction: column;
+    gap: 15px;
   }
 
   .select-value,
   .share-btn,
   .generate-btn {
-    width: 100%;
-    margin-bottom: 10px;
+    margin-top: 0;
   }
 }
 
-
-/* Ноутбуки и настольные компьютеры */
-@media (min-width: 769px) {
-  .quote-content {
-    font-size: 1.4em;
-  }
+@media (min-width: 769px) { 
+  .quote-content { 
+    font-size: 1.4em; 
+  } 
 }
