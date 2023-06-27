@@ -2,36 +2,22 @@
 <html>
 <head>
   <title>Цитатник</title>
+  <link type="image/x-icon" href="../fixtures/фавикон2-4.ico" rel="shortcut icon">
+  <link type="Image/x-icon" href="../fixtures/фавикон2-4.ico" rel="icon">
   <link rel="stylesheet" href="./styles/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="styles/style.css" rel="stylesheet" id="light-theme">
   <link href="styles/dark.css" rel="stylesheet" id="dark-theme">
-  <script type="text/javascript">
-    function switchTheme() {
-      var element = document.body;
-      element.classList.toggle("dark-mode");
-      
-      var lightTheme = document.getElementById("light-theme");
-      var darkTheme = document.getElementById("dark-theme");
-      if (element.classList.contains("dark-mode")) {
-        lightTheme.disabled = true;
-        darkTheme.disabled = false;
-      } else {
-        lightTheme.disabled = false;
-        darkTheme.disabled = true;
-      }
-    }
-  </script>
+  <script type="text/javascript" src="./scripts/theme.js"></script>
 </head>
 <body>
   <div class="header-bar"></div>
   <div class="wrapper">
-    
     <header>
       <div class="header-container">
         <h1 class="logo"><img src="../fixtures/logo.png" alt="">Цитатник</h1>
         <div class="button-container-right">
-          <button class="switch"  onclick="switchTheme()"></button>
+          <button class="switch" onclick="switchTheme()"></button>
         </div>
       </div>
     </header>
@@ -53,6 +39,5 @@
   <script src="./scripts/quote.js" type="module"></script>
   <script src="./scripts/application.js" type="module"></script>
   <script src="./scripts/index.js" type="module"></script>
-  
 </body>
 </html>

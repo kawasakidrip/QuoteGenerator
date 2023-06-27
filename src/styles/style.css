@@ -23,32 +23,163 @@ header {
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 100%; /* Добавьте эту строку */
+  width: 100%;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   flex-grow: 1;
-  padding: 0 20px; /* Увеличение горизонтальных отступов */
+  padding: 0 20px;
 }
 
 
-.button-container-right {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: 3px;
-}
 
 .logo {
   color: white;
   display: flex;
   align-items: center;
-  margin: 0;
-  font-size: 1.5em;
-  flex-grow: 1; /* Растяжение логотипа на всю доступную ширину */
+  font-size: 22px;
+}
+
+.switch {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+
+
+.quote-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.author-name {
+  color: #888888;
+  font-size: 16px;
+}
+
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.select-value {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  margin-bottom: 10px;
+  background-color: #333333;
+}
+
+.generate-btn {
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 4px;
+  background-color: #333333;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.share-btn {
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 4px;
+  background-color: #333333;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.dark-mode {
+  background-color: #222222;
+}
+
+.dark-mode .wrapper {
+  color: #FFFFFF;
+}
+
+.dark-mode .header-bar {
+  background-color: #171717;
+}
+
+.dark-mode header {
+  background-color: #171717;
+}
+
+.dark-mode .quote-title {
+  color: #FFFFFF;
+}
+
+.dark-mode .content-wrapper {
+  background-color: #2C2C2C;
+  color: #FFFFFF;
+}
+
+.dark-mode .quote-text {
+  color: #333333;
+}
+
+.dark-mode .author-name {
+  color: #AAAAAA;
+}
+
+.dark-mode .generate-btn {
+  background-color: #FF8800;
+}
+
+.dark-mode .share-btn {
+  background-color: #FF8800;
+}
+
+.dark-mode .select-value {
+  background-color: #FF8800;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding: 10px;
+  }
+  
+  .quote-title {
+    font-size: 22px;
+  }
+  
+  .quote-text {
+    font-size: 18px;
+  }
+  
+  .author-name {
+    font-size: 14px;
+  }
+  
+  .generate-btn, .share-btn {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+}
+style.css
+body {
+  position: relative;
+  background-color: #FAEEDD;
 }
 
 .logo img {
@@ -56,6 +187,17 @@ header {
   height: 1em;
   margin-right: 0.5em;
 }
+
+.switch {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 
 .quote-title {
   font-size: 2em;
@@ -68,7 +210,15 @@ header {
 .content-wrapper {
   text-align: center;
   margin-top: 150px;
-  flex-grow: 1; /* Растяжение контента на всю доступную высоту */
+  border-radius: 10px;
+  flex-grow: 1;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  background-color: #FDF4E3;
+  color: #FFFFFF; 
 }
 
 .quote-content {
@@ -88,29 +238,7 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.quote-content:before {
-  content: open-quote;
-  font-size: 2.5em;
-  color: #999999;
-  margin-bottom: -0.4em;
-}
 
-.quote-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.4em;
-  color: #666666;
-  text-align: justify;
-  line-height: 1.5;
-  padding: 20px;
-  /* background-color: #CCCCFF; */
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
 .quote-content:before {
   content: open-quote;
@@ -120,15 +248,14 @@ header {
 }
 
 .quote-content p {
-  margin: 0;
+  margin: 15px;
 }
 
 .author-name {
-  font-size: 1.3em;
-  margin-top: 15px;
-  color: #999999;
-  text-align: right;
+  color: #888888;
+  font-size: 16px;
 }
+
 
 .button-wrapper {
   display: flex;
@@ -141,27 +268,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.select-value {
-  margin-right: 15px;
-  transition: background-color 0.2s ease-in-out 0ms, padding 0.2s ease-in-out 0ms, margin-right 0.2s ease-in-out 0ms, margin-left 0.2s ease-in-out 0ms, border-radius 0.2s ease-in-out 0ms;
+  gap: 10px;
+  flex: 1;
 }
 
-.select-value,
-.share-btn,
-.generate-btn {
-  background-color: #333333;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  width: fit-content;
-  font-size: 1em;
-  margin-left: 15px;
-  margin-right: 15px;
-  transition: background-color 0.2s ease-in-out 0ms, padding 0.2s ease-in-out 0ms, margin-right 0.2s ease-in-out 0ms, margin-left 0.2s ease-in-out 0ms, border-radius 0.2s ease-in-out 0ms;
-}
+
+
 
 .select-value:hover,
 .generate-btn:hover,
@@ -187,72 +299,4 @@ header {
   margin-left: 19px;
   margin-right: 19px;
   cursor: pointer;
-}
-
-.switch { 
-  width: 30px; 
-  height: 30px; 
- 
-  background-color: black; 
-}
-
-
-@media (max-width: 480px) {
-  .wrapper {
-    padding: 10px;
-    margin-top: 30px;
-  }
-
-  .quote-title {
-    font-size: 1.5em;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .content-wrapper {
-    margin-top: 50px;
-  }
-
-  header {
-    padding: 5px;
-  }
-
-  .quote-content {
-    width: 90%;
-    max-width: 400px;
-    font-size: 1em;
-    padding: 15px;
-  }
-
-  .quote-content:before {
-    font-size: 2em;
-  }
-
-  .author-name {
-    font-size: 1em;
-    margin-top: 15px;
-  }
-
-  .button-wrapper {
-    flex-direction: column;
-    margin-top: 20px;
-    position: static;
-  }
-
-  .static-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .select-value,
-  .share-btn,
-  .generate-btn {
-    margin-top: 0;
-  }
-}
-
-@media (min-width: 769px) { 
-  .quote-content { 
-    font-size: 1.4em; 
-  } 
 }

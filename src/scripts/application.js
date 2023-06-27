@@ -8,7 +8,7 @@ const app = async () => {
   const quoteOfTheDay = document.querySelector('#quote-label');
   const quoteEl = document.querySelector('#result');
   const authorNameEl = document.querySelector('.author-name');
-  const maxCharacters = 135;
+  const maxCharacters = 175;
 
   let isButtonDisabled = false;
 
