@@ -15,7 +15,7 @@ const app = async () => {
   const generateRandomQuote = async () => {
     if (isButtonDisabled) return;
     isButtonDisabled = true;
-  
+
     const { quote, author } = await getQuote();
     if (quote) {
       const truncatedQuote = truncateQuote(quote);
@@ -26,13 +26,13 @@ const app = async () => {
         generateRandomQuote(); // Если цитата длиннее maxCharacters, генерируем новую цитату
       }
     }
-  
+
     setTimeout(() => {
       isButtonDisabled = false;
     }, 1500);
   };
-  
-  
+
+
   const getQuoteOfTheDay = async () => {
     const { quote, author } = await getQuote();
     if (quote) {
@@ -57,6 +57,26 @@ const app = async () => {
   });
 
   await getQuoteOfTheDay();
+
+  // Подключение кнопки "Поделиться"
+  const shareBtn = document.getElementById('shareBtn');
+
+  // Функция для создания ссылки на шаринг в вк
+  const createVKShareLink = () => {
+    const quoteText = document.getElementById('result').textContent;
+    const quoteAuthor = document.querySelector('.author-name').textContent;
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(quoteText);
+    const description = encodeURIComponent(quoteAuthor);
+    const vkUrl = `https://vk.com/share.php?url=${url}&title=${title}&description=${description}`;
+    return vkUrl;
+  };
+
+  // Обработчик нажатия кнопки "Поделиться"
+  shareBtn.addEventListener('click', () => {
+    const vkUrl = createVKShareLink();
+    window.open(vkUrl, '_blank', 'width=600,height=400');
+  });
 };
 
 const themeTranslations = {
