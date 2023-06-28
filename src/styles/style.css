@@ -44,16 +44,30 @@ header {
 }
 
 .switch {
-  width: 30px;
+  width: 60px;
   height: 30px;
   border-radius: 15px;
-  background-color: #FFFFFF;
+  background-color: #ccc;
   cursor: pointer;
   border: none;
   outline: none;
+  position: relative;
+  transition: background-color 0.3s ease;
 }
 
-
+.switch::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-image: url('/QuoteGenerator/fixtures/light.png');
+  background-size: cover;
+}
 
 .quote-text {
   font-size: 20px;
@@ -111,6 +125,33 @@ header {
 
 .dark-mode {
   background-color: #222222;
+}
+
+.dark-mode .switch {
+  background-color: #555;
+}
+
+.dark-mode .switch::before {
+  transform: translateX(30px);
+  background-image: url('/QuoteGenerator/fixtures/dark.png');
+  background-size: cover;
+}
+
+.dark-mode .switch::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+
+  top: 1px;
+  right: 1px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dark-mode .switch.dark-mode::after {
+  transform: translateX(-30px);
+  background-color: #fff; /* Цвет включенной темы */
 }
 
 .dark-mode .wrapper {
@@ -176,11 +217,7 @@ header {
     font-size: 16px;
   }
 }
-style.css
-body {
-  position: relative;
-  background-color: #FAEEDD;
-}
+
 
 .logo img {
   width: 1em;
@@ -188,24 +225,7 @@ body {
   margin-right: 0.5em;
 }
 
-.switch {
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  background-color: #FFFFFF;
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
 
-
-.quote-title {
-  font-size: 2em;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-  color: #333333;
-}
 
 .content-wrapper {
   text-align: center;
@@ -251,18 +271,8 @@ body {
   margin: 15px;
 }
 
-.author-name {
-  color: #888888;
-  font-size: 16px;
-}
 
 
-.button-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
 
 .static-buttons {
   display: flex;
