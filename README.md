@@ -1,2 +1,2 @@
 # QuoteGenerator
-##kawasakidrip.github.io/QuoteGenerator/
+#kawasakidrip.github.io/QuoteGenerator/
