@@ -1,2 +1,2 @@
-[QuoteGenerator]([Обычная ссылка в строке](https://www.google.com))
+[QuoteGenerator](kawasakidrip.github.io/QuoteGenerator/)
 
